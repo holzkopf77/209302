@@ -1,0 +1,23 @@
+#include <iostream>
+#include <fstream>
+class Benchmark
+{
+public:
+  long int **ZlozonoscObliczeniowa;
+  double *LiczbyGaussowe;
+  unsigned long int IloscDanych;
+  int rozmiar;
+
+  Benchmark();
+  Benchmark(int roz, unsigned long int max);
+  ~Benchmark();
+  void UstalRozmiarTablicyZlozonosciObliczeniowej(int roz);
+  std::ostream& GenerujLiczbyZmiennoprzecinkowe(long int rozmiar,std::ostream& strum);
+  void TransformacjaBoxa_Mullera(float a[]);
+  void StworzLiczbyOdniesienia(int p[], int ile);
+  void Testuj(int IloscPowtorzen, int MaxIloscDanych,
+	      void (*wsk_fun)(double*, int));
+};
+
+std::ostream& operator<<(std::ostream& Strm,const Benchmark& ben);
+std::istream& operator>>(std::istream &Strm,Benchmark &ben);

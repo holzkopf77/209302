@@ -1,0 +1,78 @@
+\section{Dokumentacja pliku Benchmark.\-cpp}
+\label{_benchmark_8cpp}\index{Benchmark.\-cpp@{Benchmark.\-cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}Benchmark.\-hh\char`\"{}}\\*
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&Strm, const {\bf Benchmark} \&ben)
+\item 
+istream \& {\bf operator$>$$>$} (istream \&Strm, {\bf Benchmark} \&ben)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+brief Definicja metod klasy \doxyref{Benchmark}{str.}{class_benchmark}
+
+Zawiera definicje metod klasy \doxyref{Benchmark}{str.}{class_benchmark} 
+
+Definicja w pliku {\bf Benchmark.\-cpp}.
+
+
+
+\subsection{Dokumentacja funkcji}
+\index{Benchmark.\-cpp@{Benchmark.\-cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Benchmark.cpp@{Benchmark.\-cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{Strm, }
+\item[{const {\bf Benchmark} \&}]{ben}
+\end{DoxyParamCaption}
+)}\label{_benchmark_8cpp_aa820c985b6db3d4b3ca8752963c9f97d}
+Funkcja operatorowa pozwala na wypisanie wszystkich liczb tablicy Liczby\-Gaussowe 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em \&\-Strm} & -\/ referencja do strumienia wyjsciowego \\
+\hline
+\mbox{\tt in,out}  & {\em \&ben} & refencja do klasy typu \doxyref{Benchmark}{str.}{class_benchmark} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencje do strumienia wyjsciowego 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Warunek wstępny}
+Poprawne wczytanie liczb tablicy Liczby\-Gaussowe 
+\end{DoxyPrecond}
+
+
+Definicja w linii 75 pliku Benchmark.\-cpp.
+
+\index{Benchmark.\-cpp@{Benchmark.\-cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Benchmark.cpp@{Benchmark.\-cpp}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{Strm, }
+\item[{{\bf Benchmark} \&}]{ben}
+\end{DoxyParamCaption}
+)}\label{_benchmark_8cpp_aebd792c01d9b28e675091ceee76aa5ba}
+Funkcja operatorowa pozwala na wczytanie liczby typu double do tablicy Liczby\-Gaussowe 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em \&\-Strm} & -\/ referencja do strumienia wejsciowego \\
+\hline
+\mbox{\tt in,out}  & {\em \&ben} & referencja do klasy typu \doxyref{Benchmark}{str.}{class_benchmark} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencje do strumienia wejsciowego 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Warunek wstępny}
+Liczba tylko typu double 
+\end{DoxyPrecond}
+
+
+Definicja w linii 92 pliku Benchmark.\-cpp.
+

@@ -1,0 +1,278 @@
+\section{Dokumentacja klasy Benchmark}
+\label{class_benchmark}\index{Benchmark@{Benchmark}}
+
+
+{\ttfamily \#include $<$Benchmark.\-hh$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Benchmark} ()
+\item 
+{\bf Benchmark} (int roz, unsigned long int max)
+\item 
+{\bf $\sim$\-Benchmark} ()
+\item 
+void {\bf Ustal\-Rozmiar\-Tablicy\-Zlozonosci\-Obliczeniowej} (int roz)
+\item 
+std\-::ostream \& {\bf Generuj\-Liczby\-Zmiennoprzecinkowe} (long int {\bf rozmiar}, std\-::ostream \&strum)
+\item 
+void {\bf Transformacja\-Boxa\-\_\-\-Mullera} (float a[$\,$])
+\item 
+void {\bf Stworz\-Liczby\-Odniesienia} (int p[$\,$], int ile)
+\item 
+void {\bf Testuj} (int Ilosc\-Powtorzen, int Max\-Ilosc\-Danych, void($\ast$wsk\-\_\-fun)(double $\ast$, int))
+\item 
+std\-::ostream \& {\bf Zapisz\-Wyniki\-Zlozonosci\-Obliczeniowej} (std\-::ostream \&Strm, int roz)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+long int $\ast$$\ast$ {\bf Zlozonosc\-Obliczeniowa}
+\item 
+double $\ast$ {\bf Liczby\-Gaussowe}
+\item 
+unsigned long int {\bf Ilosc\-Danych}
+\item 
+int {\bf rozmiar}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 10 pliku Benchmark.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{Benchmark@{Benchmark}!Benchmark@{Benchmark}}
+\index{Benchmark@{Benchmark}!Benchmark@{Benchmark}}
+\subsubsection[{Benchmark}]{\setlength{\rightskip}{0pt plus 5cm}Benchmark\-::\-Benchmark (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_acfca497989836a688d44477802e822d8}
+brief Konstruktor bezparametryczny
+
+Konstruktor bezparametryczny klasy \doxyref{Benchmark}{str.}{class_benchmark} Ustawia wszystkie zmienne i wskazniki na wartosc 0 
+
+Definicja w linii 35 pliku Benchmark.\-cpp.
+
+\index{Benchmark@{Benchmark}!Benchmark@{Benchmark}}
+\index{Benchmark@{Benchmark}!Benchmark@{Benchmark}}
+\subsubsection[{Benchmark}]{\setlength{\rightskip}{0pt plus 5cm}Benchmark\-::\-Benchmark (
+\begin{DoxyParamCaption}
+\item[{int}]{roz, }
+\item[{unsigned long int}]{max}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_ad4255005c516cdbffa2f66e6339dd675}
+brief Konstruktor z 2 argumentami int, unsigned long int
+
+Konstruktor parametryczny klasy \doxyref{Benchmark}{str.}{class_benchmark} 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em roz} & -\/ typ int, rozmiar tablicy Zlozonosc\-Obliczeniowa, \\
+\hline
+\mbox{\tt in}  & {\em max-\/} & unsigned long int, ilosc liczb zmiennoprzecinkowych tablicy Liczby\-Gaussowe \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 21 pliku Benchmark.\-cpp.
+
+\index{Benchmark@{Benchmark}!$\sim$\-Benchmark@{$\sim$\-Benchmark}}
+\index{$\sim$\-Benchmark@{$\sim$\-Benchmark}!Benchmark@{Benchmark}}
+\subsubsection[{$\sim$\-Benchmark}]{\setlength{\rightskip}{0pt plus 5cm}Benchmark\-::$\sim$\-Benchmark (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_a20476e07f09e2b20ed3e9a7f13a570e6}
+brief destruktor klasy \doxyref{Benchmark}{str.}{class_benchmark} 
+
+Definicja w linii 43 pliku Benchmark.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Benchmark@{Benchmark}!Generuj\-Liczby\-Zmiennoprzecinkowe@{Generuj\-Liczby\-Zmiennoprzecinkowe}}
+\index{Generuj\-Liczby\-Zmiennoprzecinkowe@{Generuj\-Liczby\-Zmiennoprzecinkowe}!Benchmark@{Benchmark}}
+\subsubsection[{Generuj\-Liczby\-Zmiennoprzecinkowe}]{\setlength{\rightskip}{0pt plus 5cm}ostream \& Benchmark\-::\-Generuj\-Liczby\-Zmiennoprzecinkowe (
+\begin{DoxyParamCaption}
+\item[{long int}]{rozmiar, }
+\item[{std\-::ostream \&}]{strum}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_ad6be812f42f324e7a50ecb75d607040e}
+brief Funkcja generuje liczby typu double z rozkladu Gaussa
+
+Funkcja generuje liczby typu float o rozkladzie Gaussa i zapisuje do strumienia 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em rozmiar} & -\/ long int, ilosc wygenerowanych elementow \\
+\hline
+\mbox{\tt in}  & {\em \&strum} & -\/ referencja do strumienia wyjsciowego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencje do strumienia wyjsciowego 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Warunek wstępny}
+Prawidlowe dzialanie funkcji Transformacja\-Boxa\-\_\-\-Mullera 
+\end{DoxyPrecond}
+
+
+Definicja w linii 108 pliku Benchmark.\-cpp.
+
+\index{Benchmark@{Benchmark}!Stworz\-Liczby\-Odniesienia@{Stworz\-Liczby\-Odniesienia}}
+\index{Stworz\-Liczby\-Odniesienia@{Stworz\-Liczby\-Odniesienia}!Benchmark@{Benchmark}}
+\subsubsection[{Stworz\-Liczby\-Odniesienia}]{\setlength{\rightskip}{0pt plus 5cm}void Benchmark\-::\-Stworz\-Liczby\-Odniesienia (
+\begin{DoxyParamCaption}
+\item[{int}]{p[$\,$], }
+\item[{int}]{ile}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_a9f023bc3ca418b0a9bdc44e622091866}
+brief Funkcja tworzy wygodne liczby odniesienia dla danej funkcji testowej o zadanym maximum
+
+Funkcja tworzy liczby odniesienia, by lepiej dobrac ilosci danych do testu 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em $<$em$>$p} & -\/ int, w tablicy ustalane sa argumenty liczb odniesienia \\
+\hline
+\mbox{\tt in}  & {\em ile-\/int,jak} & duzo ma zostac stworzonych liczb odniesienia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Warunek wstępny}
+Ilosc liczb odniesienia musi byc podzielna przez 4 
+\end{DoxyPrecond}
+
+
+Definicja w linii 192 pliku Benchmark.\-cpp.
+
+\index{Benchmark@{Benchmark}!Testuj@{Testuj}}
+\index{Testuj@{Testuj}!Benchmark@{Benchmark}}
+\subsubsection[{Testuj}]{\setlength{\rightskip}{0pt plus 5cm}void Benchmark\-::\-Testuj (
+\begin{DoxyParamCaption}
+\item[{int}]{Ilosc\-Powtorzen, }
+\item[{int}]{Max\-Ilosc\-Danych, }
+\item[{void($\ast$)(double $\ast$, int)}]{wsk\-\_\-fun}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_a845e97251244e016fd76a211386ec9d6}
+brief Funkcja mierzy czas trwania funkcji dla okreslonej ilosci danych
+
+Funkcja sluzy do badania zlozonosci obliczeniowej danej funkcji 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em Ilosc\-Powtorzen} & -\/ int, ile razy bedzie wykonany test \\
+\hline
+\mbox{\tt in}  & {\em Max\-Ilosc\-Danych} & -\/ int, maksymalna ilosc danych do testu \\
+\hline
+\mbox{\tt in}  & {\em wsk\-\_\-fun=} & wskaznik na funkcje testowana o arg\-:double$\ast$,int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Warunek wstępny}
+Poprawne dzialanie funkcji Stworz\-Liczby\-Odniesienia 
+\end{DoxyPrecond}
+
+
+Definicja w linii 149 pliku Benchmark.\-cpp.
+
+\index{Benchmark@{Benchmark}!Transformacja\-Boxa\-\_\-\-Mullera@{Transformacja\-Boxa\-\_\-\-Mullera}}
+\index{Transformacja\-Boxa\-\_\-\-Mullera@{Transformacja\-Boxa\-\_\-\-Mullera}!Benchmark@{Benchmark}}
+\subsubsection[{Transformacja\-Boxa\-\_\-\-Mullera}]{\setlength{\rightskip}{0pt plus 5cm}void Benchmark\-::\-Transformacja\-Boxa\-\_\-\-Mullera (
+\begin{DoxyParamCaption}
+\item[{float}]{a[$\,$]}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_a88cd04d5216ce593c83a2ace4d1fdca8}
+brief Funkcja zamienia liczby float z rozkladu rownomiernego na Gaussowy
+
+Funkcja zamienia liczby z rozkladu rownomiernego na rozklad Gaussa 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em a\mbox{[}$\,$\mbox{]}} & -\/ typ float,wskaznik na tablice 2-\/elementowa \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Warunek wstępny}
+2 liczby z rozkladu rownomiernego 
+\end{DoxyPrecond}
+
+
+Definicja w linii 134 pliku Benchmark.\-cpp.
+
+\index{Benchmark@{Benchmark}!Ustal\-Rozmiar\-Tablicy\-Zlozonosci\-Obliczeniowej@{Ustal\-Rozmiar\-Tablicy\-Zlozonosci\-Obliczeniowej}}
+\index{Ustal\-Rozmiar\-Tablicy\-Zlozonosci\-Obliczeniowej@{Ustal\-Rozmiar\-Tablicy\-Zlozonosci\-Obliczeniowej}!Benchmark@{Benchmark}}
+\subsubsection[{Ustal\-Rozmiar\-Tablicy\-Zlozonosci\-Obliczeniowej}]{\setlength{\rightskip}{0pt plus 5cm}void Benchmark\-::\-Ustal\-Rozmiar\-Tablicy\-Zlozonosci\-Obliczeniowej (
+\begin{DoxyParamCaption}
+\item[{int}]{roz}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_ae368ddb026799a351c48cca37f0d8101}
+brief Ustalenie rozmiaru tablicy zlozonosci obliczeniowej
+
+Funkcja ustala na nowo rozmiar tablicy Zlozonosc\-Obliczeniowa 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em roz} & -\/ typ int, rozmiar tablicy Zlozonosc\-Obliczeniowa \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Warunek wstępny}
+zmienna roz musi byc dodatnia 
+\end{DoxyPrecond}
+
+
+Definicja w linii 55 pliku Benchmark.\-cpp.
+
+\index{Benchmark@{Benchmark}!Zapisz\-Wyniki\-Zlozonosci\-Obliczeniowej@{Zapisz\-Wyniki\-Zlozonosci\-Obliczeniowej}}
+\index{Zapisz\-Wyniki\-Zlozonosci\-Obliczeniowej@{Zapisz\-Wyniki\-Zlozonosci\-Obliczeniowej}!Benchmark@{Benchmark}}
+\subsubsection[{Zapisz\-Wyniki\-Zlozonosci\-Obliczeniowej}]{\setlength{\rightskip}{0pt plus 5cm}ostream \& Benchmark\-::\-Zapisz\-Wyniki\-Zlozonosci\-Obliczeniowej (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{Strm, }
+\item[{int}]{roz}
+\end{DoxyParamCaption}
+)}\label{class_benchmark_aad2f9082804804036652cf9c51f7b503}
+Funkcja sluzy do zapisania wynikow z tablicy Zlozonosc\-Obliczeniowa 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \&\-Strum} & -\/ referencja do strumienia wyjsciowego \\
+\hline
+\mbox{\tt in}  & {\em roz} & -\/ ilosc elementow w tablicy Zlozonosc\-Obliczniowa przez 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencje do strumienia wyjsciowego 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Warunek wstępny}
+Poprawnie wczytane wartosci tablicy Zlozonosc\-Obliczeniowa 
+\end{DoxyPrecond}
+
+
+Definicja w linii 211 pliku Benchmark.\-cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Benchmark@{Benchmark}!Ilosc\-Danych@{Ilosc\-Danych}}
+\index{Ilosc\-Danych@{Ilosc\-Danych}!Benchmark@{Benchmark}}
+\subsubsection[{Ilosc\-Danych}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long int Benchmark\-::\-Ilosc\-Danych}\label{class_benchmark_af1a957a8d0a03f8ffe46254c2e70fb00}
+brief ilosc liczb z rozkladu Gaussa 
+
+Definicja w linii 24 pliku Benchmark.\-hh.
+
+\index{Benchmark@{Benchmark}!Liczby\-Gaussowe@{Liczby\-Gaussowe}}
+\index{Liczby\-Gaussowe@{Liczby\-Gaussowe}!Benchmark@{Benchmark}}
+\subsubsection[{Liczby\-Gaussowe}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Benchmark\-::\-Liczby\-Gaussowe}\label{class_benchmark_a724da083f84249bfa2fd30526b249aab}
+brief wskaznik na tablice przechowujaca elementy z rozkladu gaussa 
+
+Definicja w linii 20 pliku Benchmark.\-hh.
+
+\index{Benchmark@{Benchmark}!rozmiar@{rozmiar}}
+\index{rozmiar@{rozmiar}!Benchmark@{Benchmark}}
+\subsubsection[{rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}int Benchmark\-::rozmiar}\label{class_benchmark_af99294c0704a176c5fda8dc47e2eb1e5}
+brief ilosc liczb zlozonosci obliczeniowej 
+
+Definicja w linii 28 pliku Benchmark.\-hh.
+
+\index{Benchmark@{Benchmark}!Zlozonosc\-Obliczeniowa@{Zlozonosc\-Obliczeniowa}}
+\index{Zlozonosc\-Obliczeniowa@{Zlozonosc\-Obliczeniowa}!Benchmark@{Benchmark}}
+\subsubsection[{Zlozonosc\-Obliczeniowa}]{\setlength{\rightskip}{0pt plus 5cm}long int$\ast$$\ast$ Benchmark\-::\-Zlozonosc\-Obliczeniowa}\label{class_benchmark_ade239a0ce7d783ba10a387471e70a415}
+brief wskaznik na tablice przechowujaca wartosci zlozonosci obliczeniowej(ilosc danych,czas) 
+
+Definicja w linii 16 pliku Benchmark.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Benchmark.\-hh}\item 
+{\bf Benchmark.\-cpp}\end{DoxyCompactItemize}
