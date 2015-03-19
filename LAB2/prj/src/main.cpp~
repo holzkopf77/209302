@@ -1,0 +1,15 @@
+#include <iostream>
+#include "Stack.hh"
+#include "Lista.hh"
+#include "Kolejka.hh"
+using namespace std;
+int main()
+{
+  try{
+    Stack<double> stos(2);
+    List<double> lista;
+    Kolejka<double> kolejeczka;
+  }
+  catch(string ostrzezenie)
+    {cout<<ostrzezenie<<endl;}
+}

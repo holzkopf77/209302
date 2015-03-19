@@ -1,0 +1,173 @@
+\section{List$<$ T $>$ Class Template Reference}
+\label{class_list}\index{List$<$ T $>$@{List$<$ T $>$}}
+
+
+klasa \doxyref{List}{p.}{class_list} sluzy do wykonywania podstawowych operacji na Liscie\-: dodaj,odejmij element. Przechowuje informacje o ilosci wszysktich elementow.  
+
+
+
+
+{\ttfamily \#include $<$Lista.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf List} ()
+\item 
+{\bf $\sim$\-List} ()
+\item 
+int {\bf size} ()
+\item 
+void {\bf push\-\_\-front} (T value)
+\item 
+void {\bf pop\-\_\-front} ()
+\item 
+void {\bf push\-\_\-back} (T value)
+\item 
+void {\bf pop\-\_\-back} ()
+\item 
+void {\bf show} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class List$<$ T $>$}
+
+klasa \doxyref{List}{p.}{class_list} sluzy do wykonywania podstawowych operacji na Liscie\-: dodaj,odejmij element. Przechowuje informacje o ilosci wszysktich elementow. 
+
+Definition at line 23 of file Lista.\-hh.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf List}$<$ T $>$\-::{\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_list_a5c5e27671b21b3815d4e25b953c69454}
+brief Konstruktor bezparametryczny
+
+Konstruktor bezparametryczny, ustawia parametry na 0 
+
+Definition at line 73 of file Lista.\-hh.
+
+\index{List@{List}!$\sim$\-List@{$\sim$\-List}}
+\index{$\sim$\-List@{$\sim$\-List}!List@{List}}
+\subsubsection[{$\sim$\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf List}$<$ T $>$\-::$\sim${\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_list_a2b58189090f6e5ce52939c9195e59e85}
+brief Destruktor
+
+Destruktor, usuwa kolejne elementy listy zaczynajac od poczatku 
+
+Definition at line 83 of file Lista.\-hh.
+
+
+
+\subsection{Member Function Documentation}
+\index{List@{List}!pop\-\_\-back@{pop\-\_\-back}}
+\index{pop\-\_\-back@{pop\-\_\-back}!List@{List}}
+\subsubsection[{pop\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List}$<$ T $>$\-::pop\-\_\-back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_list_a42e1aee3e26b76b3f4d9386efa7fe8b7}
+brief Funkcja zdejmuje element z konca listy
+
+Funkcja usuwa element z konca listy \begin{DoxyPrecond}{Precondition}
+Lista nie moze byc pusta 
+\end{DoxyPrecond}
+
+
+Definition at line 159 of file Lista.\-hh.
+
+\index{List@{List}!pop\-\_\-front@{pop\-\_\-front}}
+\index{pop\-\_\-front@{pop\-\_\-front}!List@{List}}
+\subsubsection[{pop\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List}$<$ T $>$\-::pop\-\_\-front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_list_a024af4543f71544345351a45850c42d8}
+brief Funkcja zdejmuje element z poczatku listy
+
+Funkcja usuwa element z poczatku listy \begin{DoxyPrecond}{Precondition}
+Lista nie moze byc pusta 
+\end{DoxyPrecond}
+
+
+Definition at line 120 of file Lista.\-hh.
+
+\index{List@{List}!push\-\_\-back@{push\-\_\-back}}
+\index{push\-\_\-back@{push\-\_\-back}!List@{List}}
+\subsubsection[{push\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List}$<$ T $>$\-::push\-\_\-back (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\label{class_list_a6c3e359bceddd875f6d27e75de7ed15d}
+brief Funkcja dodaje element na koniec listy
+
+Funkcja dodaje element na koniec listy 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & -\/ typ int, wartosc elementu dodanego na koniec listy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 138 of file Lista.\-hh.
+
+\index{List@{List}!push\-\_\-front@{push\-\_\-front}}
+\index{push\-\_\-front@{push\-\_\-front}!List@{List}}
+\subsubsection[{push\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List}$<$ T $>$\-::push\-\_\-front (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\label{class_list_a2b4c57456c11a4d95bf039ae2d4e1e3c}
+brief Funkcja dodaje element na poczatek listy
+
+Funkcja sluzy do dodania elementu na poczatek listy 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value-\/typ} & int, wartosc elementu zmiennej dodanej do listy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file Lista.\-hh.
+
+\index{List@{List}!show@{show}}
+\index{show@{show}!List@{List}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List}$<$ T $>$\-::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_list_aeed4e21c08aa25bf4fe12a2ac96c0f1f}
+brief Funkcja wyswietla wszystkie elementy na standardowe wyjscie
+
+Funkcja wyswietla elementy listy 
+
+Definition at line 187 of file Lista.\-hh.
+
+\index{List@{List}!size@{size}}
+\index{size@{size}!List@{List}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf List}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_list_a2497bdf42246d61237aaf046c116183a}
+brief Funkcja zwraca rozmiar listy
+
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca wartosc rozmiaru listy 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Lista.\-hh.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+inc/{\bf Lista.\-hh}\end{DoxyCompactItemize}
