@@ -1,0 +1,28 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include "Benchmark.hh"
+#include "Stack.hh"
+#include "Lista.hh"
+#include "Kolejka.hh"
+using namespace std;
+
+int main()
+{
+  long int IloscLiczb=10000000;
+  ofstream plikwy;
+  plikwy.open("Wyniczki.dat");
+  ifstream plikwe;
+  plikwe.open("daneCalkowite.dat");
+  Benchmark<int> a(10,IloscLiczb);//10-ilosc cykli z jaka bedzie badana funkcja
+  plikwe>>a;
+  List<int> b;
+  try{
+  b.push(2);
+  b.push(3);
+  b.push(8);}
+  catch(string warning)
+    {cout<<warning<<endl;}
+  b.show();
+  
+}
