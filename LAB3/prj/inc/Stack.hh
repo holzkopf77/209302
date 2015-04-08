@@ -83,13 +83,13 @@ void  Stack<T>::push(T value)
   if((top-storage)==capacity)
     {
       //throw string("Pojemnosc stostu jest pelna,operacja nieudana");
-      T *nowaTablica=new T [capacity+1];
+      T *nowaTablica=new T [capacity*2];
       for(int i=0;i<capacity;++i)
 	  nowaTablica[i]=storage[i];
       delete []storage;
       storage=nowaTablica;
       top=storage+capacity;
-      capacity+=1;
+      capacity*=2;
     }
   *top++=value;
 }
