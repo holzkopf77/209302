@@ -11,6 +11,7 @@ struct  NodeL
 {
   T  val;
   NodeL<T> * next;
+  NodeL<T> *prev;
 };
 
 
@@ -21,10 +22,12 @@ struct  NodeL
 template<typename T>
 class List
 {
+public:
 /*!
  *brief wskaznik do ktorego doczepione sa kolejne elementy
  */
   NodeL<T> *head;
+  NodeL<T> *tail;
 /*!
  *brief Informacja o rozmiarze listy
  */
@@ -62,6 +65,7 @@ public:
  *brief Funkcja wyswietla wszystkie elementy na standardowe wyjscie
  */
   void show();
+  void showOdKonca();
   void push(T value,int nr=0);
 };
 
@@ -73,6 +77,7 @@ template <typename T>
 List<T>::List()
   {
     head=nullptr;
+    tail=nullptr;
     _size=0;
   }
 
@@ -108,7 +113,10 @@ void  List<T>::push_front(T value)
     NodeL<T> *p=new NodeL<T>;
     p->val=value;
     p->next=head;
+    p->prev=nullptr;
+    if(size())head->prev=p;
     head=p;// nowy poczatek listy
+    if(!(size()))tail=head;
     ++_size;
   }
 
@@ -123,6 +131,7 @@ void List<T>::pop_front()
     if(p!=nullptr)
       {
 	head=p->next;
+	head->prev=nullptr;
 	delete p;
 	--_size;
       }
@@ -145,9 +154,11 @@ void List<T>::push_back(T value)
   if(p!=nullptr) //jeśli lista nie jest pusta
   {
      while(p->next!=nullptr) p = p->next; //szukam końca listy
+     p->prev=p;
      p->next = n; //wstawiam na końcowy zamiast nullptr
+     tail=n;
   }
-  else head = n;
+  else {head = n;tail=head;}
   ++_size;
 }
 
@@ -199,6 +210,7 @@ void List<T>::pop_back()
     if(p->next!=nullptr) //usuwanie jeśli jest więcej elementów niż tylko startowy
     {
       while(p->next->next!=nullptr) p = p->next; // szukam przedostatniego z listy
+      tail=tail->prev;
       delete p->next; //usuwam ostatniego
       p->next = nullptr; //oznaczam nowy koniec listy
     }
@@ -206,6 +218,7 @@ void List<T>::pop_back()
     {
       delete p;  
       head = nullptr; // lista staje się listą pustą
+      tail=nullptr;
     }
   }
   else
@@ -226,6 +239,21 @@ void List<T>::show()
     {
       std::cout<<p->val<<" ";
       p=p->next;
+    }
+}
+
+/*!
+ *Funkcja wyswietla elementy listy
+ */
+template <typename T>
+void List<T>::showOdKonca()
+{
+  std::cout<<"and"<<std::endl;
+  NodeL<T>* p=tail;
+  for(int i=0;i<_size;++i)
+    {
+      std::cout<<p->val<<" ";
+      p=p->prev;
     }
 }
 
