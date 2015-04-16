@@ -14,7 +14,7 @@ void ZapiszKolejnoLiczbyListy(double* Gausowe,int size)
 {
   List<double> lista;
   for(long int i=0;i<size;++i)
-    lista.push_back(Gausowe[i]);
+    lista.push_front(Gausowe[i]);
 }
 
 void ZapiszKolejnoLiczbyKolejki(double* Gausowe,int size)

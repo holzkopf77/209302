@@ -23,3 +23,12 @@ void ZapiszKolejnoLiczbyKolejki(double* Gausowe,int size)
   for(long int i=0;i<size;++i)
     kolejeczka.push_front(Gausowe[i]);
 }
+
+void WczytajListe(std::istream &Strm,unsigned long int IloscDanych, List<int> * dane)
+{
+  int a;
+  for(int i=0;i<IloscDanych;++i){
+    Strm>>a;
+    dane->push_front(a);
+  }
+}

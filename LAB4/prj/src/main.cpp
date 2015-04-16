@@ -6,38 +6,27 @@
 #include "OperacjeNaPlikach.hh"
 #include "Struktury.hh"
 #include "Sortowanie.hh"
+
 using namespace std;
 
 int main()
 {
-
-  List<int> *lista=new List<int>;
   
-  long int  IloscLiczb=30;
-  //int *dane= new int[IloscLiczb];
+  List<int> lista2;
+  long int  IloscLiczb=30000;
+  int *tab=new int[IloscLiczb];
   ifstream plikwe;
   ofstream plikwyStosu,plikwyKolejki,plikwyListy;
   plikwe.open("daneCalkowite.dat");
   plikwyStosu.open("wynikiStosu.dat");
-  plikwyListy.open("wynikiListy.dat");
-  plikwyKolejki.open("wynikiKolejki.dat");
-  //  WczytajDaneZpliku(plikwe,IloscLiczb,dane);
-  cout<<"andrzej"<<endl;
-  for(int i=0;i<IloscLiczb;++i)
-    {
-      int a;plikwe>>a;
-      lista->push_front(a);
-    }
-  lista->show();
-  Ob(lista,IloscLiczb-1);
-  cout<<endl;
-  lista->show();
-  /*Benchmark<int> ben(1,IloscLiczb,dane);
+  WczytajListe(plikwe,IloscLiczb,&lista2);
+
+  Benchmark<List<int>> ben(1,IloscLiczb,&lista2);
   try{
-    ben.Testuj(IloscLiczb,&ObudowaQuickSort);
+    ben.Testuj(IloscLiczb,Ob);
     ben.ZapiszWynikiZlozonosciObliczeniowej(plikwyStosu);
-    delete [] dane;
-  }
+    delete tab;
+    }
   catch(string ostrzezenie)
-  {cout<<ostrzezenie<<endl;}*/
+  {cout<<ostrzezenie<<endl;}
 }

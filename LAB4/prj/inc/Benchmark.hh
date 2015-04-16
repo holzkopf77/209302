@@ -69,6 +69,7 @@ public:
    */
   void Testuj(int MaxIloscDanych,
 	      void (*wsk_fun)(T*, int));
+
   std::ostream& ZapiszWynikiZlozonosciObliczeniowej(std::ostream& Strm);
 };
 

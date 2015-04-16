@@ -1,5 +1,7 @@
 #ifndef LIST__HH
 #define LIST__HH
+#include <string>
+#include <iostream>
 /**********************************************************************************/
 /*!
  * \file
@@ -67,6 +69,13 @@ public:
   void show();
   void showOdKonca();
   void push(T value,int nr=0);
+  T& operator[](int a)
+  {
+    NodeL<T> *p=head;
+    for(int i=0;i<a;++i)p=p->next;
+    return (p->val);
+  }
+  
 };
 
 

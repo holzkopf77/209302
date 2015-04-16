@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-  long int  IloscLiczb=75000;
+  long int  IloscLiczb=750000;
   ifstream plikwe;
   ofstream plikwyStosu,plikwyKolejki,plikwyListy;
   plikwe.open("dane.dat");
@@ -19,7 +19,7 @@ int main()
   plikwe>>ben;  
 
   try{
-    ben.Testuj(IloscLiczb,&ZapiszKolejnoLiczbyStosu);
+    ben.Testuj(IloscLiczb,&ZapiszKolejnoLiczbyListy);
     ben.ZapiszWynikiZlozonosciObliczeniowej(plikwyStosu);
   }
   catch(string ostrzezenie)
