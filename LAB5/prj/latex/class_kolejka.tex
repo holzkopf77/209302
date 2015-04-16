@@ -1,0 +1,133 @@
+\section{Kolejka$<$ T $>$ Class Template Reference}
+\label{class_kolejka}\index{Kolejka$<$ T $>$@{Kolejka$<$ T $>$}}
+
+
+klasa \doxyref{Kolejka}{p.}{class_kolejka} sluzy do wykonywania podstawowych operacji na Kolejce\-: dodaj,odejmij element. Przechowuje informacje o ilosci wszysktich elementow.  
+
+
+
+
+{\ttfamily \#include $<$Kolejka.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Kolejka} ()
+\item 
+{\bf $\sim$\-Kolejka} ()
+\item 
+int {\bf size} ()
+\item 
+void {\bf push\-\_\-front} (T value)
+\item 
+void {\bf pop\-\_\-back} ()
+\item 
+void {\bf show} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Kolejka$<$ T $>$}
+
+klasa \doxyref{Kolejka}{p.}{class_kolejka} sluzy do wykonywania podstawowych operacji na Kolejce\-: dodaj,odejmij element. Przechowuje informacje o ilosci wszysktich elementow. 
+
+Definition at line 21 of file Kolejka.\-hh.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Kolejka@{Kolejka}!Kolejka@{Kolejka}}
+\index{Kolejka@{Kolejka}!Kolejka@{Kolejka}}
+\subsubsection[{Kolejka}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Kolejka}$<$ T $>$\-::{\bf Kolejka} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_a576eb7abc018d1adc1040285fda27c43}
+brief Konstruktor bezparametryczny
+
+Konstruktor bezparametryczny, ustawia parametry na 0 
+
+Definition at line 59 of file Kolejka.\-hh.
+
+\index{Kolejka@{Kolejka}!$\sim$\-Kolejka@{$\sim$\-Kolejka}}
+\index{$\sim$\-Kolejka@{$\sim$\-Kolejka}!Kolejka@{Kolejka}}
+\subsubsection[{$\sim$\-Kolejka}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Kolejka}$<$ T $>$\-::$\sim${\bf Kolejka} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_a5d3334a50106d57d2465522fb58701c0}
+Destruktor, usuwa kolejne elementy kolejki zaczynajac od poczatku 
+
+Definition at line 69 of file Kolejka.\-hh.
+
+
+
+\subsection{Member Function Documentation}
+\index{Kolejka@{Kolejka}!pop\-\_\-back@{pop\-\_\-back}}
+\index{pop\-\_\-back@{pop\-\_\-back}!Kolejka@{Kolejka}}
+\subsubsection[{pop\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Kolejka}$<$ T $>$\-::pop\-\_\-back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_a1c5bf50cc1431b0e6af20ee3289699e6}
+brief Funkcja zdejmuje element z konca kolejki
+
+Funkcja usuwa element z konca kolejki \begin{DoxyPrecond}{Precondition}
+\doxyref{Kolejka}{p.}{class_kolejka} nie moze byc pusta 
+\end{DoxyPrecond}
+
+
+Definition at line 106 of file Kolejka.\-hh.
+
+\index{Kolejka@{Kolejka}!push\-\_\-front@{push\-\_\-front}}
+\index{push\-\_\-front@{push\-\_\-front}!Kolejka@{Kolejka}}
+\subsubsection[{push\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Kolejka}$<$ T $>$\-::push\-\_\-front (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_a9fe17cfd429e3a29373a1e0d229733ea}
+brief Funkcja dodaje element na poczatek kolejki
+
+Funkcja sluzy do dodania elementu na poczatek kolejki 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value-\/typ} & int, wartosc elementu zmiennej dodanej do kolejki \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 92 of file Kolejka.\-hh.
+
+\index{Kolejka@{Kolejka}!show@{show}}
+\index{show@{show}!Kolejka@{Kolejka}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Kolejka}$<$ T $>$\-::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_a929496e3ada70f837b1672fe2170c0a4}
+brief Funkcja wyswietla wszystkie elementy na standardowe wyjscie
+
+Funkcja wyswietla elementy kolejki 
+
+Definition at line 134 of file Kolejka.\-hh.
+
+\index{Kolejka@{Kolejka}!size@{size}}
+\index{size@{size}!Kolejka@{Kolejka}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Kolejka}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_kolejka_a9992a77318d031852cda3d28fd1f80b3}
+brief Funkcja zwraca rozmiar kolejki
+
+\begin{DoxyReturn}{Returns}
+Funkcja zwraca wartosc rozmiaru kolejki 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Kolejka.\-hh.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+inc/{\bf Kolejka.\-hh}\end{DoxyCompactItemize}
