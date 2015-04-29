@@ -1,0 +1,127 @@
+\begin{theindex}
+
+  \item {$\sim$\-Kolejka}
+    \subitem {Kolejka}, 5
+  \item {$\sim$\-List}
+    \subitem {List}, 7
+  \item {$\sim$\-Stack}
+    \subitem {Stack}, 10
+
+  \indexspace
+
+  \item {capacity}
+    \subitem {Stack}, 11
+
+  \indexspace
+
+  \item {inc/\-Kolejka.\-hh}, 13
+  \item {inc/\-Lista.\-hh}, 13
+  \item {inc/\-Stack.\-hh}, 14
+
+  \indexspace
+
+  \item {Kolejka}
+    \subitem {$\sim$\-Kolejka}, 5
+    \subitem {Kolejka}, 5
+    \subitem {pop\-\_\-back}, 6
+    \subitem {push\-\_\-front}, 6
+    \subitem {show}, 6
+    \subitem {size}, 6
+  \item {Kolejka$<$ T $>$}, 5
+
+  \indexspace
+
+  \item {List}
+    \subitem {$\sim$\-List}, 7
+    \subitem {List}, 7
+    \subitem {pop\-\_\-back}, 7
+    \subitem {pop\-\_\-front}, 7
+    \subitem {push\-\_\-back}, 8
+    \subitem {push\-\_\-front}, 8
+    \subitem {show}, 8
+    \subitem {size}, 8
+  \item {List$<$ T $>$}, 6
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.\-cpp}, 16
+  \item {main.\-cpp}
+    \subitem {main}, 16
+
+  \indexspace
+
+  \item {next}
+    \subitem {Node}, 9
+    \subitem {Node\-L}, 9
+  \item {Node}
+    \subitem {next}, 9
+    \subitem {val}, 9
+  \item {Node$<$ T $>$}, 8
+  \item {Node\-L}
+    \subitem {next}, 9
+    \subitem {val}, 9
+  \item {Node\-L$<$ T $>$}, 9
+
+  \indexspace
+
+  \item {operator$<$$<$}
+    \subitem {Stack.\-hh}, 15
+
+  \indexspace
+
+  \item {peek}
+    \subitem {Stack}, 10
+  \item {pop}
+    \subitem {Stack}, 10
+  \item {pop\-\_\-back}
+    \subitem {Kolejka}, 6
+    \subitem {List}, 7
+  \item {pop\-\_\-front}
+    \subitem {List}, 7
+  \item {push}
+    \subitem {Stack}, 11
+  \item {push\-\_\-back}
+    \subitem {List}, 8
+  \item {push\-\_\-front}
+    \subitem {Kolejka}, 6
+    \subitem {List}, 8
+
+  \indexspace
+
+  \item {show}
+    \subitem {Kolejka}, 6
+    \subitem {List}, 8
+  \item {size}
+    \subitem {Kolejka}, 6
+    \subitem {List}, 8
+    \subitem {Stack}, 11
+  \item {src/main.\-cpp}, 15
+  \item {Stack}
+    \subitem {$\sim$\-Stack}, 10
+    \subitem {capacity}, 11
+    \subitem {peek}, 10
+    \subitem {pop}, 10
+    \subitem {push}, 11
+    \subitem {size}, 11
+    \subitem {Stack}, 10
+    \subitem {storage}, 11
+    \subitem {top}, 11
+  \item {Stack$<$ T $>$}, 10
+  \item {Stack.\-hh}
+    \subitem {operator$<$$<$}, 15
+  \item {storage}
+    \subitem {Stack}, 11
+
+  \indexspace
+
+  \item {top}
+    \subitem {Stack}, 11
+
+  \indexspace
+
+  \item {val}
+    \subitem {Node}, 9
+    \subitem {Node\-L}, 9
+
+\end{theindex}
