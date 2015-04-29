@@ -1,0 +1,10 @@
+Kod odpowiedzialny za zmiane rozmiaru tablicy stosu znajduje sie w:
+inc/Stack.hh line 88
+T *nowaTablica=new T [capacity*2];
+zamiana na
+T *nowaTablica=new T [capacity+1];
+
+w inc/Stack.hh line 94
+capacity*=2;
+zamiana na
+capacity++;
