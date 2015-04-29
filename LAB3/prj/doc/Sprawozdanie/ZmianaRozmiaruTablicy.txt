@@ -1,0 +1,10 @@
+W pliku inc/Stack.hh
+line 86
+T *nowaTablica=new T [capacity*2];
+zamiana na
+ T *nowaTablica=new T [capacity+1];
+
+i line
+capacity*=2;
+zamiana na
+capacity++;
