@@ -39,7 +39,7 @@ public:
   /*!
    * brief Konstruktor z 2 argumentami int, unsigned long int
    */
-  Benchmark(int roz, unsigned long int max);
+  Benchmark(int roz, unsigned long int max, T* Struktura=nullptr);
     /*!
    * brief destruktor klasy Benchmark
    */
@@ -69,6 +69,7 @@ public:
    */
   void Testuj(int MaxIloscDanych,
 	      void (*wsk_fun)(T*, int));
+
   std::ostream& ZapiszWynikiZlozonosciObliczeniowej(std::ostream& Strm);
 };
 
@@ -78,14 +79,14 @@ public:
 * \param[in] max- unsigned long int, ilosc liczb zmiennoprzecinkowych tablicy LiczbyGaussowe
 */
 template<typename T>
-Benchmark<T>::Benchmark(int roz,unsigned long int max)/*: rozmiar(roz),IloscDanych(max)*/
+Benchmark<T>::Benchmark(int roz,unsigned long int max,T* Struktura)/*: rozmiar(roz),IloscDanych(max)*/
   {
     rozmiar=roz;
     IloscDanych=max;
     ZlozonoscObliczeniowa=new unsigned long int*[rozmiar];
     for(int i=0;i<rozmiar;++i)
       ZlozonoscObliczeniowa[i]=new  unsigned long int[2];
-    LiczbyGaussowe=new T[IloscDanych];
+    LiczbyGaussowe=Struktura;
   }
 
 /*!
@@ -192,6 +193,13 @@ std::ostream& Benchmark<T>::GenerujLiczbyZmiennoprzecinkowe(long  int rozmiar,st
   return strum;      
 }
 
+/*!
+ * Funkcja generuje liczby typu int o rozkladzie Gaussa i zapisuje do strumienia
+ * \param[in] rozmiar - long int, ilosc wygenerowanych elementow
+ * \param[in] &strum - referencja do strumienia wyjsciowego
+ * \return Zwraca referencje do strumienia wyjsciowego
+ * \pre Prawidlowe dzialanie funkcji TransformacjaBoxa_Mullera
+ */
 template<typename T>
 std::ostream& Benchmark<T>::GenerujLiczbyCalkowiteLosowe(long  int rozmiar,std::ostream& strum)
 {
@@ -230,7 +238,6 @@ void Benchmark<T>::TransformacjaBoxa_Mullera(float *a)
 
 /*!
  * Funkcja sluzy do badania zlozonosci obliczeniowej danej funkcji
- * \param[in] IloscPowtorzen -  int, ile razy bedzie wykonany test
  * \param[in] MaxIloscDanych - int, maksymalna ilosc danych do testu
  * \param[in] wsk_fun= wskaznik na funkcje testowana o arg:double*,int
  * \pre Funkcja w argumencie musi być typu(TypSzablonuBenchmark,maxLiczbaElementow)

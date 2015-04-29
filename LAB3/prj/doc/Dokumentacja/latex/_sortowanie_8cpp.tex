@@ -1,0 +1,375 @@
+\section{Dokumentacja pliku Sortowanie.\-cpp}
+\label{_sortowanie_8cpp}\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}}
+{\ttfamily \#include \char`\"{}Sortowanie.\-hh\char`\"{}}\\*
+Wykres zależności załączania dla Sortowanie.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{_sortowanie_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf quicksort} (int $\ast$tablica, int lewy, int prawy)
+\item 
+void {\bf quicksort\-Mediana} (int $\ast$tablica, int lewy, int prawy)
+\item 
+void {\bf Obudowa\-Quick\-Sort} (int $\ast$tablica, int rozmiar)
+\item 
+void {\bf Obudowa\-Quick\-Sort\-Mediana} (int $\ast$tablica, int rozmiar)
+\item 
+void {\bf quicksort\-Lista} ({\bf List}$<$ int $>$ $\ast$tablica, {\bf Node\-L}$<$ int $>$ $\ast$lewy, {\bf Node\-L}$<$ int $>$ $\ast$prawy, int index\-Lewy, int index\-Prawy)
+\item 
+void {\bf Ob} ({\bf List}$<$ int $>$ $\ast$list, int rozmiar)
+\item 
+void {\bf Obudowa\-Merge\-Sortowanie} ({\bf Stack}$<$ int $>$ $\ast$tab, int rozmiar)
+\item 
+void {\bf Merging} ({\bf Stack}$<$ int $>$ $\ast$tab, int lewy, int srodek, int prawy)
+\item 
+void {\bf Merge\-Sortowanie} ({\bf Stack}$<$ int $>$ $\ast$tab, int lewy, int prawy)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!Merge\-Sortowanie@{Merge\-Sortowanie}}
+\index{Merge\-Sortowanie@{Merge\-Sortowanie}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{Merge\-Sortowanie}]{\setlength{\rightskip}{0pt plus 5cm}void Merge\-Sortowanie (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack}$<$ int $>$ $\ast$}]{tab, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_ab00f437616b519c083daf8fd32dc3c79}
+brief Funkcja sortuje tablice skladajaca sie z elementow typu int za pomoca algorytmu Scalania 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & tab-\/ typ Stack$<$int$>$ $\ast$, wskaznik na tablice do posortowania \\
+\hline
+{\em \mbox{]}} & lewy -\/ typ int, indeks poczatku lewej podtablicy \\
+\hline
+{\em \mbox{]}} & prawy -\/ typ int, indeks konca prawej podtablicy \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 187 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{_sortowanie_8cpp_ab00f437616b519c083daf8fd32dc3c79_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sortowanie_8cpp_ab00f437616b519c083daf8fd32dc3c79_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!Merging@{Merging}}
+\index{Merging@{Merging}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{Merging}]{\setlength{\rightskip}{0pt plus 5cm}void Merging (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack}$<$ int $>$ $\ast$}]{tab, }
+\item[{int}]{lewy, }
+\item[{int}]{srodek, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_a0621dcd631e5d5c2ff4080e2106c06f1}
+brief Funkcja scala dwa zbiory liczb rosnaca, jest funkcja skladowa Merge\-Sortowanie 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & tab-\/ typ Stack$<$int$>$ $\ast$, wskaznik na tablice do scalenia \\
+\hline
+{\em \mbox{]}} & lewy -\/ typ int, indeks poczatku lewej podtablicy \\
+\hline
+{\em \mbox{]}} & srodek -\/typ int, indeks konca lewj podtablicy \\
+\hline
+{\em \mbox{]}} & prawy -\/ typ int, indeks konca prawej podtablicy \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 160 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sortowanie_8cpp_a0621dcd631e5d5c2ff4080e2106c06f1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!Ob@{Ob}}
+\index{Ob@{Ob}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{Ob}]{\setlength{\rightskip}{0pt plus 5cm}void Ob (
+\begin{DoxyParamCaption}
+\item[{{\bf List}$<$ int $>$ $\ast$}]{list, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_a08b237eec08c3e09ab1fae1f8bb1228a}
+brief Funkcja obudowuje funkcje quicksort, zeby mogla zostac wczytana przez klase \doxyref{Benchmark}{str.}{class_benchmark} 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & list -\/ typ List$<$int$>$$\ast$, wskaznik na liste do posortowania \\
+\hline
+{\em \mbox{]}} & rozmiar -\/ typ int, ilosc elementow do posortowania zaczynajac od poczatku listy \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 137 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{_sortowanie_8cpp_a08b237eec08c3e09ab1fae1f8bb1228a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!Obudowa\-Merge\-Sortowanie@{Obudowa\-Merge\-Sortowanie}}
+\index{Obudowa\-Merge\-Sortowanie@{Obudowa\-Merge\-Sortowanie}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{Obudowa\-Merge\-Sortowanie}]{\setlength{\rightskip}{0pt plus 5cm}void Obudowa\-Merge\-Sortowanie (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack}$<$ int $>$ $\ast$}]{tab, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_ad3c648657588dd895ff2067dbf3c1157}
+brief Funkcja obudowuje funkcje Merge\-Sortowanie,zeby mogla zostac wczytana przez klase \doxyref{Benchmark}{str.}{class_benchmark} 
+
+Definicja w linii 146 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sortowanie_8cpp_ad3c648657588dd895ff2067dbf3c1157_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{_sortowanie_8cpp_ad3c648657588dd895ff2067dbf3c1157_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!Obudowa\-Quick\-Sort@{Obudowa\-Quick\-Sort}}
+\index{Obudowa\-Quick\-Sort@{Obudowa\-Quick\-Sort}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{Obudowa\-Quick\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void Obudowa\-Quick\-Sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{tablica, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_a5e829d34c4e1d2f4ce4d05c5f810e6cb}
+Funkcja obudowuje funkcje quicksort, zeby mogla zostac wczytana przez klase \doxyref{Benchmark}{str.}{class_benchmark} 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & tablica -\/ typ int$\ast$, wskaznik na tablice do posortowania \\
+\hline
+{\em \mbox{]}} & rozmiar -\/ typ int, ilosc elementow do posortowania zaczynajac od indeksu 0 \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 81 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{_sortowanie_8cpp_a5e829d34c4e1d2f4ce4d05c5f810e6cb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!Obudowa\-Quick\-Sort\-Mediana@{Obudowa\-Quick\-Sort\-Mediana}}
+\index{Obudowa\-Quick\-Sort\-Mediana@{Obudowa\-Quick\-Sort\-Mediana}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{Obudowa\-Quick\-Sort\-Mediana}]{\setlength{\rightskip}{0pt plus 5cm}void Obudowa\-Quick\-Sort\-Mediana (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{tablica, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_a370cf5f1bcb58fe847d729c9066202ba}
+Funkcja obudowuje funkcje quicksort, zeby mogla zostac wczytana przez klase \doxyref{Benchmark}{str.}{class_benchmark} 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & tablica -\/ typ int$\ast$, wskaznik na tablice do posortowania \\
+\hline
+{\em \mbox{]}} & rozmiar -\/ typ int, ilosc elementow do posortowania zaczynajac od indeksu 0 \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 93 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sortowanie_8cpp_a370cf5f1bcb58fe847d729c9066202ba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{_sortowanie_8cpp_a370cf5f1bcb58fe847d729c9066202ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!quicksort@{quicksort}}
+\index{quicksort@{quicksort}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{quicksort}]{\setlength{\rightskip}{0pt plus 5cm}void quicksort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{tablica, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_afeb0867fa199171cc82cfb1c7db6c747}
+Funkcja sortuje tablice typu int za pomoca algorytmu quicksort 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & tablica -\/ typ int$\ast$, wskaznik na tablice do posortowania \\
+\hline
+{\em \mbox{]}} & lewy -\/ typ int, lewy indeks tablicy \\
+\hline
+{\em \mbox{]}} & prawy -\/ typ int, prawy indeks tablicy \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 9 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sortowanie_8cpp_afeb0867fa199171cc82cfb1c7db6c747_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!quicksort\-Lista@{quicksort\-Lista}}
+\index{quicksort\-Lista@{quicksort\-Lista}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{quicksort\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}void quicksort\-Lista (
+\begin{DoxyParamCaption}
+\item[{{\bf List}$<$ int $>$ $\ast$}]{tablica, }
+\item[{{\bf Node\-L}$<$ int $>$ $\ast$}]{lewy, }
+\item[{{\bf Node\-L}$<$ int $>$ $\ast$}]{prawy, }
+\item[{int}]{index\-Lewy, }
+\item[{int}]{index\-Prawy}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_af467a7de462587952ddc60c3fc097d06}
+Funkcja sortuje Liste skladajaca sie z elementow typu int za pomoca algorytmu quicksort 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & tablica -\/ typ List$<$int$>$$\ast$, wskaznik na Liste do posortowania \\
+\hline
+{\em \mbox{]}} & lewy -\/ Node\-L$<$int$>$ $\ast$ ,wskaznik na lewy wezel Listy \\
+\hline
+{\em \mbox{]}} & prawy -\/ Node\-L$<$int$>$ $\ast$, wskaznik na prawy wezel Listy \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 106 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{_sortowanie_8cpp_af467a7de462587952ddc60c3fc097d06_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sortowanie.\-cpp@{Sortowanie.\-cpp}!quicksort\-Mediana@{quicksort\-Mediana}}
+\index{quicksort\-Mediana@{quicksort\-Mediana}!Sortowanie.cpp@{Sortowanie.\-cpp}}
+\subsubsection[{quicksort\-Mediana}]{\setlength{\rightskip}{0pt plus 5cm}void quicksort\-Mediana (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{tablica, }
+\item[{int}]{lewy, }
+\item[{int}]{prawy}
+\end{DoxyParamCaption}
+)}\label{_sortowanie_8cpp_a8cbece89620d6af036d2f64c2129a7f5}
+Funkcja sortuje tablice typu int za pomoca algorytmu quicksort z wyborem pivota na podstawie mediany 3 elementow 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & tablica -\/ typ int$\ast$, wskaznik na tablice do posortowania \\
+\hline
+{\em \mbox{]}} & lewy -\/ typ int, lewy indeks tablicy \\
+\hline
+{\em \mbox{]}} & prawy -\/ typ int, prawy indeks tablicy \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 41 pliku Sortowanie.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{_sortowanie_8cpp_a8cbece89620d6af036d2f64c2129a7f5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sortowanie_8cpp_a8cbece89620d6af036d2f64c2129a7f5_icgraph}
+\end{center}
+\end{figure}
+
+
