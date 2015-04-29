@@ -26,9 +26,12 @@ class List
 {
 public:
 /*!
- *brief wskaznik do ktorego doczepione sa kolejne elementy
+ *brief wskaznik do ktorego doczepione sa kolejne elementy listy
  */
   NodeL<T> *head;
+  /*!
+   *brief wskaznik pokazujacy na koniec listy
+   */
   NodeL<T> *tail;
 /*!
  *brief Informacja o rozmiarze listy
@@ -66,9 +69,21 @@ public:
 /*!
  *brief Funkcja wyswietla wszystkie elementy na standardowe wyjscie
  */
+/*!
+ *brief Funkcja pokazujaca na strumieniu std::cout zawartosc listy
+ */
   void show();
+  /*!
+   *brief Funkcja pokazujaca na strumieniu std::cout zawartosc listy od konca
+   */
   void showOdKonca();
+  /*!
+   *brief Funkcja dodaje element przed elementem o indeksie nr
+   */
   void push(T value,int nr=0);
+  /*!
+   * Przeciazony operator indeksowania zwraca referencje do elementu o indeksie a
+   */
   T& operator[](int a)
   {
     NodeL<T> *p=head;
@@ -252,7 +267,7 @@ void List<T>::show()
 }
 
 /*!
- *Funkcja wyswietla elementy listy
+ *Funkcja wyswietla elementy listy od konca
  */
 template <typename T>
 void List<T>::showOdKonca()

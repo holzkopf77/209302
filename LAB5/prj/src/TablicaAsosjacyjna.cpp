@@ -6,6 +6,10 @@
 #include <fstream>
 using namespace std;
 
+/*!
+ * Konstruktor parametryczny klasy TablicaAsocjacyjna
+ * \param[] roz - typ int, decyduje o rozmiarze slownika i wzmocnienia
+ */
 TablicaAsocjacyjna::TablicaAsocjacyjna(unsigned long int roz):slownik(roz)
   {
     rozmiar=roz;
@@ -13,12 +17,22 @@ TablicaAsocjacyjna::TablicaAsocjacyjna(unsigned long int roz):slownik(roz)
     else wzmocnienie=1;
   }
 
+/*!
+ * Funkcja wyszukujaca dany string w slowniku z wykorzystaniem haszowania
+ * \param[] nazwa - nazwa stringu, ktory bedzie haszowany i umieszczony
+ * w slowniku
+ */
 void TablicaAsocjacyjna::WstawianieDoTablicy(string nazwa)
 {
   unsigned int indeks=Haszowanie(nazwa);
   slownik[indeks].push_front(nazwa);
 }
 
+/*!
+ * Funkcja wstawia dane z pliku do slownika z wykorzystaniem haszowania
+ * \param[] plikwe - referencja do strumienia wejsciowego
+ * \param[] size - typ int, ilosc liczb wczytanych z pliku do slownika
+ */
 void TablicaAsocjacyjna::WstawianieDanychZPliku(ifstream& plikwe, int size)
 {
   string nazwa;
@@ -28,7 +42,11 @@ void TablicaAsocjacyjna::WstawianieDanychZPliku(ifstream& plikwe, int size)
   }
 }
 
-
+/*!
+ *  Funkcja haszujaca dany string
+ * \param[] nazwa - string z ktorego zostanie obliczona wartosc hasz
+ * \return unsigned int- wartosc haszu z podanego stringu
+ */
 unsigned int TablicaAsocjacyjna::Haszowanie(string nazwa)
 {
   unsigned int h,i;
@@ -38,6 +56,11 @@ unsigned int TablicaAsocjacyjna::Haszowanie(string nazwa)
   return h%rozmiar;
 }
 
+/*!
+ * Funkcja wyszukujaca dany string w slowniku z wykorzystaniem haszowania
+ * \param[] nazwa - string z ktorego zostanie obliczona wartosc hasz
+ * \return true-jesli dany string znaleziono, false - nie znaleziono
+ */
 bool TablicaAsocjacyjna::Wyszukaj(string nazwa)
 {
   unsigned int i=0;
@@ -54,7 +77,12 @@ bool TablicaAsocjacyjna::Wyszukaj(string nazwa)
   
   return false;
 }
-
+/*!
+ * Funkcja tworzaca przykladowy zestaw danych stringow
+ * \param[] Strm - referencja do strumieinia wyjsciowego
+ * \param[] rozmiarek - typ u_int , ilosc stworzonych stringow
+ * \param[] IleLiter - typ int, jak wiele liter ma posiadac dany string
+ */
 ostream& TablicaAsocjacyjna::StworzDane(ostream &Strm,unsigned int rozmiarek,int IleLiter)
 {
   string nazwa="";

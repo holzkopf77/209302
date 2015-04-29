@@ -1,11 +1,11 @@
 #include "Sortowanie.hh"
 
-void ObudowaQuickSort(int *tablica,int rozmiar)
-{
-  int lewy=0;
-  int prawy=rozmiar-1;
-  quicksort(tablica,lewy,prawy);
-}
+/*!
+ * Funkcja sortuje tablice typu int za pomoca algorytmu quicksort
+ * \param[] tablica - typ int*, wskaznik na tablice do posortowania
+ * \param[] lewy - typ int, lewy indeks tablicy
+ * \param[] prawy - typ int, prawy indeks tablicy
+ */
 void quicksort(int *tablica, int lewy, int prawy)
 {
     int v=tablica[(lewy+prawy)/2];
@@ -30,45 +30,25 @@ void quicksort(int *tablica, int lewy, int prawy)
     if(i<prawy) quicksort(tablica, i, prawy);
 }
 
-void Ob(List<int> *list,int rozmiar)
+/*!
+ * brief  Funkcja obudowuje funkcje quicksort, zeby mogla zostac wczytana przez klase Benchmark
+ * \param[] tablica - typ int*, wskaznik na tablice do posortowania
+ * \param[] rozmiar - typ int, ilosc elementow do posortowania zaczynajac od indeksu 0
+ */
+void ObudowaQuickSort(int *tablica,int rozmiar)
 {
-  NodeL<int> *h=list->head;
-  NodeL<int> *t=list->tail;
-  quicksortLista2(list,list->head,list->tail,0,rozmiar-1);
-  list->head=h;
-  list->tail=t;
+  int lewy=0;
+  int prawy=rozmiar-1;
+  quicksort(tablica,lewy,prawy);
 }
 
-void quicksortLista(List<int> *tablica,int lewy,int prawy)
-{
-  int v=(*tablica)[(lewy+prawy)/2];
-    int i,j,x;
-    i=lewy;
-    j=prawy;
-    NodeL<int> *left=tablica->head;
-    for(int a=0;a<lewy;++a)left=left->next;
-    
-    NodeL<int> *right=tablica->head;
-    for(int a=0;a<prawy;++a)right=right->next;
-    do
-    {
-      while((left->val)<v) {++i;left=left->next;}
-      while((right->val)>v){ --j;right=right->prev;}
-        if(i<=j)
-        {
-	  x=left->val;
-	  left->val=right->val;
-	  right->val=x;
-            ++i;
-            --j;
-        }
-    }
-    while(i<=j);
-    if(j>lewy) quicksortLista(tablica,lewy, j);
-    if(i<prawy) quicksortLista(tablica, i, prawy);
-}
-
-void quicksortLista2(List<int> *tablica,NodeL<int> *lewy,NodeL<int>*prawy,int indexLewy,int indexPrawy)
+/*!
+ * Funkcja sortuje Liste skladajaca sie z elementow typu int za pomoca algorytmu quicksort
+ * \param[] tablica - typ List<int>*, wskaznik na Liste do posortowania
+ * \param[] lewy - NodeL<int> * ,wskaznik na lewy wezel Listy
+ * \param[] prawy - NodeL<int> *, wskaznik na prawy wezel Listy
+ */
+void quicksortLista(List<int> *tablica,NodeL<int> *lewy,NodeL<int>*prawy,int indexLewy,int indexPrawy)
 {
   int v=(*tablica)[(indexLewy+indexPrawy)/2];
   int x;
@@ -90,6 +70,72 @@ void quicksortLista2(List<int> *tablica,NodeL<int> *lewy,NodeL<int>*prawy,int in
         }
     }
     while(indexLewy<=indexPrawy);
-    if(indexPrawy>l) quicksortLista2(tablica,lewy, j,l,indexPrawy);
-    if(indexLewy<p) quicksortLista2(tablica, i, prawy,indexLewy,p);//const prawy,p
+    if(indexPrawy>l) quicksortLista(tablica,lewy, j,l,indexPrawy);
+    if(indexLewy<p) quicksortLista(tablica, i, prawy,indexLewy,p);//const prawy,p
 }
+
+/*!
+ * brief  Funkcja obudowuje funkcje quicksort, zeby mogla zostac wczytana przez klase Benchmark
+ * \param[] list - typ List<int>*, wskaznik na liste do posortowania
+ * \param[] rozmiar - typ int, ilosc elementow do posortowania zaczynajac od poczatku listy
+ */
+void Ob(List<int> *list,int rozmiar)
+{
+  NodeL<int> *h=list->head;
+  NodeL<int> *t=list->tail;
+  quicksortLista(list,list->head,list->tail,0,rozmiar-1);
+  list->head=h;
+  list->tail=t;
+}
+
+/*!
+ * brief Funkcja scala dwa zbiory liczb rosnaca, jest funkcja skladowa MergeSortowanie
+ * \param[] tab- typ Stack<int> *, wskaznik na tablice do scalenia
+ * \param[] lewy - typ int, indeks poczatku lewej podtablicy
+ * \param[] srodek -typ int, indeks konca lewj podtablicy
+ * \param[] prawy - typ int, indeks konca prawej podtablicy
+ */
+void Merging(Stack<int> *tab, int lewy, int srodek, int prawy) 
+{
+  int i, j;
+  Stack<int> pom(prawy+1);
+  //zapisujemy lewą częsć podtablicy w tablicy pomocniczej
+  for(i = srodek + 1; i>lewy; i--) 
+    pom[i-1] = (*tab)[i-1]; 
+ 
+  //zapisujemy prawą częsć podtablicy w tablicy pomocniczej
+  for(j = srodek; j<prawy; j++) 
+    pom[prawy+srodek-j] = (*tab)[j+1]; 
+ 
+  //scalenie dwóch podtablic pomocniczych i zapisanie ich 
+  //we własciwej tablicy
+  for(int k=lewy;k<=prawy;k++) 
+    if(pom[j]<pom[i])
+      (*tab)[k] = pom[j--];
+    else
+      (*tab)[k] = pom[i++];
+}
+
+/*!
+ * brief Funkcja sortuje tablice skladajaca sie z elementow typu int za pomoca algorytmu Scalania
+ * \param[] tab- typ Stack<int> *, wskaznik na tablice do posortowania
+ * \param[] lewy - typ int, indeks poczatku lewej podtablicy
+ * \param[] prawy - typ int, indeks konca prawej podtablicy
+ */
+void MergeSortowanie(Stack<int> *tab,int lewy, int prawy)
+{
+  //gdy mamy jeden element, to jest on już posortowany
+  if(prawy<=lewy) return; 
+ 
+  //znajdujemy srodek podtablicy
+  int srodek = (prawy+lewy)/2;
+ 
+  //dzielimy tablice na częsć lewą i prawa
+  MergeSortowanie(tab, lewy, srodek); 
+  MergeSortowanie(tab, srodek+1, prawy);
+ 
+  //scalamy dwie już posortowane tablice
+  Merging(tab, lewy, srodek, prawy);
+}
+
+

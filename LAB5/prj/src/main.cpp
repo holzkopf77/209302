@@ -9,8 +9,6 @@
 #include "HaszWyszukaj.hh"
 #include <vector>
 using namespace std;
-void puszek(TablicaAsocjacyjna *a, int rozmiar);
-void wypuszek(TablicaAsocjacyjna *a,int rozmiar);
 
 int main()
 {
@@ -28,23 +26,4 @@ int main()
     ben.ZapiszWynikiZlozonosciObliczeniowej(wynikHaszowania);
   }
   catch(string ostrzezenie){cout<<ostrzezenie<<endl;}
-}
-
-void puszek(TablicaAsocjacyjna *a,int rozmiar)
-{
-  ifstream daneNazw;
-  daneNazw.open("daneNazwy.dat");
-  a->WstawianieDanychZPliku(daneNazw,rozmiar);
-}
-
-void wypuszek(TablicaAsocjacyjna *a,int rozmiar)
-{
-  ifstream daneNazw;
-  daneNazw.open("daneNazwy.dat");
-  string temp;
-  for (int i = 0; i < rozmiar; ++i) {
-    daneNazw>>temp;
-    a->Wyszukaj(temp);
-  }
-
 }

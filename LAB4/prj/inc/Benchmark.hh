@@ -193,6 +193,13 @@ std::ostream& Benchmark<T>::GenerujLiczbyZmiennoprzecinkowe(long  int rozmiar,st
   return strum;      
 }
 
+/*!
+ * Funkcja generuje liczby typu int o rozkladzie Gaussa i zapisuje do strumienia
+ * \param[in] rozmiar - long int, ilosc wygenerowanych elementow
+ * \param[in] &strum - referencja do strumienia wyjsciowego
+ * \return Zwraca referencje do strumienia wyjsciowego
+ * \pre Prawidlowe dzialanie funkcji TransformacjaBoxa_Mullera
+ */
 template<typename T>
 std::ostream& Benchmark<T>::GenerujLiczbyCalkowiteLosowe(long  int rozmiar,std::ostream& strum)
 {
@@ -231,7 +238,6 @@ void Benchmark<T>::TransformacjaBoxa_Mullera(float *a)
 
 /*!
  * Funkcja sluzy do badania zlozonosci obliczeniowej danej funkcji
- * \param[in] IloscPowtorzen -  int, ile razy bedzie wykonany test
  * \param[in] MaxIloscDanych - int, maksymalna ilosc danych do testu
  * \param[in] wsk_fun= wskaznik na funkcje testowana o arg:double*,int
  * \pre Funkcja w argumencie musi być typu(TypSzablonuBenchmark,maxLiczbaElementow)
