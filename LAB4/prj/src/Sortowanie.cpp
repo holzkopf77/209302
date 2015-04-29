@@ -160,22 +160,17 @@ void ObudowaMergeSortowanie(Stack<int> *tab,int rozmiar)
 void Merging(Stack<int> *tab, int lewy, int srodek, int prawy) 
 {
   int i, j;
-  Stack<int> pom(prawy+1);
-  //zapisujemy lewą częsć podtablicy w tablicy pomocniczej
+  Stack<int> temp(prawy+1);
   for(i = srodek + 1; i>lewy; i--) 
-    pom[i-1] = (*tab)[i-1]; 
- 
-  //zapisujemy prawą częsć podtablicy w tablicy pomocniczej
+    temp[i-1] = (*tab)[i-1]; 
   for(j = srodek; j<prawy; j++) 
-    pom[prawy+srodek-j] = (*tab)[j+1]; 
+    temp[prawy+srodek-j] = (*tab)[j+1]; 
  
-  //scalenie dwóch podtablic pomocniczych i zapisanie ich 
-  //we własciwej tablicy
   for(int k=lewy;k<=prawy;k++) 
-    if(pom[j]<pom[i])
-      (*tab)[k] = pom[j--];
+    if(pom[j]<temp[i])
+      (*tab)[k] = temp[j--];
     else
-      (*tab)[k] = pom[i++];
+      (*tab)[k] = temp[i++];
 }
 
 /*!
@@ -186,17 +181,10 @@ void Merging(Stack<int> *tab, int lewy, int srodek, int prawy)
  */
 void MergeSortowanie(Stack<int> *tab,int lewy, int prawy)
 {
-  //gdy mamy jeden element, to jest on już posortowany
   if(prawy<=lewy) return; 
- 
-  //znajdujemy srodek podtablicy
   int srodek = (prawy+lewy)/2;
- 
-  //dzielimy tablice na częsć lewą i prawa
   MergeSortowanie(tab, lewy, srodek); 
   MergeSortowanie(tab, srodek+1, prawy);
- 
-  //scalamy dwie już posortowane tablice
   Merging(tab, lewy, srodek, prawy);
 }
 
