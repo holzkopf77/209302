@@ -27,7 +27,7 @@ public:
   /*
    *brief Konstruktor parametryczny klasy Stack
    */
-  Stack(int capacity);
+  Stack(int capacity=10);
   /*
    *brief Funkcja dodaje element na koniec stosu
    */
@@ -48,14 +48,15 @@ public:
    *brief Funkcja zdejmuje ostatni element stosu
    */
   void pop();
+  /*!
+   * brief Przeciazony operator indeksowania, umozliwia traktowanie stosu jak tablicy
+   */
+    T& operator[](int a)
+  {
+    return *(storage+a);
+  }
 
 };
-/*
- *brief Wypisanie stosu
- /
-template<typename T>
-std::ostream& operator<<(std::ostream &out,const Stack<T> &stack);
-*/
 
 /*!
  * Konstruktor parametryczny klasy Stack
@@ -108,6 +109,7 @@ T Stack<T>::peek()
 }
 
 /*!
+ * Funkcja pokazuje ilosc elementow stosu
  * \return zwraca ilosc elementow stosu
  */
 template<typename T>

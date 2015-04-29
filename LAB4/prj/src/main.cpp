@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstdlib>
 #include "Benchmark.hh"
 #include "ZapiszStosKolejkaLista.hh"
 #include "OperacjeNaPlikach.hh"
@@ -9,22 +10,25 @@
 
 using namespace std;
 
-int main()
+int main(int argc,char *argv[])
 {
-  
-  List<int> lista2;
-  long int  IloscLiczb=30000;
+  long int IloscLiczb=10;
+  if(argc>1)
+    IloscLiczb=strtol(argv[1],nullptr,10);
   int *tab=new int[IloscLiczb];
   ifstream plikwe;
-  ofstream plikwyStosu,plikwyKolejki,plikwyListy;
-  plikwe.open("daneCalkowite.dat");
+  ofstream plikwyStosu,plikPosortowany;
+  plikwe.open("DanePosortowane100.dat");
   plikwyStosu.open("wynikiStosu.dat");
-  WczytajListe(plikwe,IloscLiczb,&lista2);
-
-  Benchmark<List<int>> ben(1,IloscLiczb,&lista2);
+  //plikPosortowany.open("DanePosortowane.dat");
+  WczytajDaneZpliku(plikwe,IloscLiczb,tab);
+  Benchmark<int> ben(1,IloscLiczb,tab);
   try{
-    ben.Testuj(IloscLiczb,Ob);
+    ben.Testuj(IloscLiczb,ObudowaQuickSortMediana);
     ben.ZapiszWynikiZlozonosciObliczeniowej(plikwyStosu);
+    ben.ZapiszWynikiZlozonosciObliczeniowej(cout);
+    /*for(int i=0;i<IloscLiczb;++i)
+      plikPosortowany<<tab[i]<<endl;*/
     delete tab;
     }
   catch(string ostrzezenie)
