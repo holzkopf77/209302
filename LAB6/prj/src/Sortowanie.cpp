@@ -1,5 +1,10 @@
 #include "Sortowanie.hh"
-
+#include "Lista.hh"
+#include <iostream>
+#include <chrono>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
 /*!
  * Funkcja sortuje tablice typu int za pomoca algorytmu quicksort
  * \param[] tablica - typ int*, wskaznik na tablice do posortowania
@@ -87,9 +92,10 @@ void Ob(List<int> *list,int rozmiar)
   quicksortLista(list,list->head,list->tail,0,rozmiar-1);
   list->head=h;
   list->tail=t;
+std::cout<<"Dotad"<<std::endl;
   auto elapsed = std::chrono::high_resolution_clock::now() - start;
   auto microseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
-  ZmienDaneTestowe(rozmiar,microseconds);
+  list->ZmienDaneTestowe(rozmiar,microseconds);
 }
 
 /*!

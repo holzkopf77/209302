@@ -1,13 +1,12 @@
 #ifndef LIST__HH
 #define LIST__HH
-#include "Benchmark.hh"
 #include <string>
 #include <iostream>
 #include "NodeL.hh"
 #include <vector>
 #include "iLista.hh"
 #include "iObserwowany.hh"
-
+#include "Obserwator.hh"
 /**********************************************************************************/
 
 
@@ -19,7 +18,7 @@ template<typename T>
 class List:public iList<T>,public iObserwowany<T>
 {
 public:
-  std::vector<Benchmark<T>> Obserwatorzy;
+  std::vector<Obserwator<T>*> Obserwatorzy;
   long int RozmiarTestowanychDanych;
   long int StopCzas;
 /*!
@@ -73,9 +72,9 @@ public:
     for(int i=0;i<a;++i)p=p->next;
     return (p->val);
   }
-  void dodaj(T* obserwator);
+  void dodaj(Obserwator<T>* obserwator);
   void powiadom();
-  void usun(T*obserwator);
+  void usun(Obserwator<T> *obserwator);
   void ZmienDaneTestowe(long int IloscTestowanychDane, long int CzasStopu);
   
 };
@@ -307,12 +306,12 @@ void List<T>::showOdKonca()
 }
 
 template <typename T>
-void List<T>::dodaj(T *obserwator)
+void List<T>::dodaj(Obserwator<T>* obserwator)
 {
   Obserwatorzy.push_back(obserwator);
 }
 template <typename T>
-void List<T>::usun(T *obserwator)
+void List<T>::usun(Obserwator<T>* obserwator)
 {
   Obserwatorzy.pop_back();
 }
@@ -321,7 +320,7 @@ template <typename T>
 void List<T>::powiadom()
 {
   for(int i=0;i<Obserwatorzy.size();++i)
-      Obserwatorzy[i].odswiez(RozmiarTestowanychDanych,StopCzas);
+      Obserwatorzy[i]->odswiez(RozmiarTestowanychDanych,StopCzas);
 }
 
 template<typename T>

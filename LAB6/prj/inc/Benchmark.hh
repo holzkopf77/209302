@@ -324,7 +324,7 @@ std::ostream& Benchmark<T>::ZapiszWynikiZlozonosciObliczeniowej(std::ostream& St
 template<typename T>
 void Benchmark<T>::odswiez(long int IloscTestowanychDanych, long int CzasStopu)
 {
-  ZlozonoscObliczniowa[IleRazyWykonanyTest][0]=IloscTestowanychDanych;
+  ZlozonoscObliczeniowa[IleRazyWykonanyTest][0]=IloscTestowanychDanych;
   ZlozonoscObliczeniowa[IleRazyWykonanyTest][1]=CzasStopu;
  ++IleRazyWykonanyTest;
 }

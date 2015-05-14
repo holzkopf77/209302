@@ -12,7 +12,7 @@ a.out: obj/HaszWyszukaj.o obj/main.o obj/Sortowanie.o obj/TablicaAsosjacyjna.o o
 obj/HaszWyszukaj.o: src/HaszWyszukaj.cpp inc/Benchmark.hh inc/HaszWyszukaj.hh inc/iKolejka.hh inc/iKontenery.hh inc/iLista.hh inc/iObserwator.hh inc/iObserwowany.hh inc/iStack.hh inc/Kolejka.hh inc/Lista.hh inc/Node.hh inc/NodeL.hh inc/OperacjeNaPlikach.hh inc/Sortowanie.hh inc/Stack.hh inc/Struktury.hh inc/TablicaAsocjacyjna.hh inc/ZapiszStosKolejkaLista.hh 
 	g++ ${CPPFLAGS} -o obj/HaszWyszukaj.o src/HaszWyszukaj.cpp
 
-obj/main.o: src/main.cpp inc/Benchmark.hh inc/HaszWyszukaj.hh inc/iKolejka.hh inc/iKontenery.hh inc/iLista.hh inc/iObserwator.hh inc/iObserwowany.hh inc/iStack.hh inc/Kolejka.hh inc/Lista.hh inc/Node.hh inc/NodeL.hh inc/OperacjeNaPlikach.hh inc/Sortowanie.hh inc/Stack.hh inc/Struktury.hh inc/TablicaAsocjacyjna.hh inc/ZapiszStosKolejkaLista.hh 
+obj/main.o: src/main.cpp inc/Benchmark.hh inc/HaszWyszukaj.hh inc/iKolejka.hh inc/iKontenery.hh inc/iLista.hh inc/iObserwator.hh inc/iObserwowany.hh inc/iStack.hh inc/Kolejka.hh inc/Lista.hh inc/Node.hh inc/NodeL.hh inc/OperacjeNaPlikach.hh inc/Sortowanie.hh inc/Stack.hh inc/Struktury.hh inc/TablicaAsocjacyjna.hh inc/ZapiszStosKolejkaLista.hh inc/Obserwator.hh 
 	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
 
 obj/Sortowanie.o: src/Sortowanie.cpp inc/Benchmark.hh inc/HaszWyszukaj.hh inc/iKolejka.hh inc/iKontenery.hh inc/iLista.hh inc/iObserwator.hh inc/iObserwowany.hh inc/iStack.hh inc/Kolejka.hh inc/Lista.hh inc/Node.hh inc/NodeL.hh inc/OperacjeNaPlikach.hh inc/Sortowanie.hh inc/Stack.hh inc/Struktury.hh inc/TablicaAsocjacyjna.hh inc/ZapiszStosKolejkaLista.hh 
