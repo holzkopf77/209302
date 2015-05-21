@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-	int a;
+  int a;
   ifstream daneNazw;
   ofstream wynikSortowania;
   wynikSortowania.open("wynikiSortowania.dat");

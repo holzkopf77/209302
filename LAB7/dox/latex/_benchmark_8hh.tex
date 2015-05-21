@@ -1,0 +1,94 @@
+\section{Dokumentacja pliku Benchmark.\-hh}
+\label{_benchmark_8hh}\index{Benchmark.\-hh@{Benchmark.\-hh}}
+
+
+Klasa \doxyref{Benchmark}{str.}{class_benchmark} sluzy do przechowywania wynikow zlozonosci obliczeniowej i danych wejsciowych,generowania liczb rozkladu Gaussowego.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+Wykres zależności załączania dla Benchmark.\-hh\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_benchmark_8hh__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{_benchmark_8hh__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Benchmark$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::ostream \& {\bf operator$<$$<$} (std\-::ostream \&Strm, const {\bf Benchmark}$<$ T $>$ \&ben)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::istream \& {\bf operator$>$$>$} (std\-::istream \&Strm, {\bf Benchmark}$<$ T $>$ \&ben)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\index{Benchmark.\-hh@{Benchmark.\-hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Benchmark.hh@{Benchmark.\-hh}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{Strm, }
+\item[{const {\bf Benchmark}$<$ T $>$ \&}]{ben}
+\end{DoxyParamCaption}
+)}\label{_benchmark_8hh_a09165957505edd311379cffe3322da36}
+Funkcja operatorowa pozwala na wypisanie wszystkich liczb tablicy Liczby\-Gaussowe 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em \&\-Strm} & -\/ referencja do strumienia wyjsciowego \\
+\hline
+\mbox{\tt in,out}  & {\em \&ben} & refencja do klasy typu \doxyref{Benchmark}{str.}{class_benchmark} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencje do strumienia wyjsciowego 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Warunek wstępny}
+Poprawne wczytanie liczb tablicy Liczby\-Gaussowe 
+\end{DoxyPrecond}
+
+
+Definicja w linii 140 pliku Benchmark.\-hh.
+
+\index{Benchmark.\-hh@{Benchmark.\-hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Benchmark.hh@{Benchmark.\-hh}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{Strm, }
+\item[{{\bf Benchmark}$<$ T $>$ \&}]{ben}
+\end{DoxyParamCaption}
+)}\label{_benchmark_8hh_a849f5a7f6bcdc2c75a3d6bc6367f792e}
+Funkcja operatorowa pozwala na wczytanie liczby typu double do tablicy Liczby\-Gaussowe 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em \&\-Strm} & -\/ referencja do strumienia wejsciowego \\
+\hline
+\mbox{\tt in,out}  & {\em \&ben} & referencja do klasy typu \doxyref{Benchmark}{str.}{class_benchmark} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencje do strumienia wejsciowego 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Warunek wstępny}
+Liczba tylko typu double 
+\end{DoxyPrecond}
+
+
+Definicja w linii 158 pliku Benchmark.\-hh.
+

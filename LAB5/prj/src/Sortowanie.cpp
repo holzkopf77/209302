@@ -1,7 +1,7 @@
 #include "Sortowanie.hh"
 
 /*!
- * Funkcja sortuje tablice typu int za pomoca algorytmu quicksort
+ * Funkcja sortuje tablice typu int pomoca algorytmu quicksort
  * \param[] tablica - typ int*, wskaznik na tablice do posortowania
  * \param[] lewy - typ int, lewy indeks tablicy
  * \param[] prawy - typ int, prawy indeks tablicy
