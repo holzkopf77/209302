@@ -1,0 +1,290 @@
+\section{Dokumentacja klasy Tablica\-Asocjacyjna}
+\label{class_tablica_asocjacyjna}\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}}
+
+
+{\ttfamily \#include $<$Tablica\-Asocjacyjna.\-hh$>$}
+
+
+
+Diagram współpracy dla Tablica\-Asocjacyjna\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tablica_asocjacyjna__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Tablica\-Asocjacyjna} (unsigned long int roz)
+\item 
+unsigned int {\bf Haszowanie} (std\-::string nazwa)
+\item 
+void {\bf Wstawianie\-Do\-Tablicy} (std\-::string nazwa)
+\item 
+bool {\bf Wyszukaj} (std\-::string nazwa)
+\item 
+std\-::ostream \& {\bf Stworz\-Dane} (std\-::ostream \&Strm, unsigned int {\bf rozmiar}, int Ile\-Liter)
+\item 
+void {\bf Wstawianie\-Danych\-Z\-Pliku} (std\-::ifstream \&plikwe, int size)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long int {\bf rozmiar}
+\item 
+unsigned int {\bf wzmocnienie}
+\item 
+{\bf Stack}$<$ {\bf List}$<$ std\-::string $>$ $>$ {\bf slownik}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 12 pliku Tablica\-Asocjacyjna.\-hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}}
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{Tablica\-Asocjacyjna}]{\setlength{\rightskip}{0pt plus 5cm}Tablica\-Asocjacyjna\-::\-Tablica\-Asocjacyjna (
+\begin{DoxyParamCaption}
+\item[{unsigned long int}]{roz}
+\end{DoxyParamCaption}
+)}\label{class_tablica_asocjacyjna_aee0d297d1d45a603ff8895f029248640}
+brief Konstruktor z parametrem informujacym o rozmiarze slownika
+
+Konstruktor parametryczny klasy \doxyref{Tablica\-Asocjacyjna}{str.}{class_tablica_asocjacyjna} 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & roz -\/ typ int, decyduje o rozmiarze slownika i wzmocnienia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 13 pliku Tablica\-Asosjacyjna.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!Haszowanie@{Haszowanie}}
+\index{Haszowanie@{Haszowanie}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{Haszowanie}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tablica\-Asocjacyjna\-::\-Haszowanie (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{nazwa}
+\end{DoxyParamCaption}
+)}\label{class_tablica_asocjacyjna_a2308399ff078591ba1ba87a74a3d8031}
+brief Funkcja haszujaca dany string
+
+Funkcja haszujaca dany string 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & nazwa -\/ string z ktorego zostanie obliczona wartosc hasz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+unsigned int-\/ wartosc haszu z podanego stringu 
+\end{DoxyReturn}
+
+
+Definicja w linii 50 pliku Tablica\-Asosjacyjna.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tablica_asocjacyjna_a2308399ff078591ba1ba87a74a3d8031_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!Stworz\-Dane@{Stworz\-Dane}}
+\index{Stworz\-Dane@{Stworz\-Dane}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{Stworz\-Dane}]{\setlength{\rightskip}{0pt plus 5cm}ostream \& Tablica\-Asocjacyjna\-::\-Stworz\-Dane (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{Strm, }
+\item[{unsigned int}]{rozmiar, }
+\item[{int}]{Ile\-Liter}
+\end{DoxyParamCaption}
+)}\label{class_tablica_asocjacyjna_a4362e8b064c99c6c7129b71ceb76c4c4}
+brief Funkcja tworzaca przykladowy zestaw danych stringow
+
+Funkcja tworzaca przykladowy zestaw danych stringow 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & Strm -\/ referencja do strumieinia wyjsciowego \\
+\hline
+{\em \mbox{]}} & rozmiarek -\/ typ u\-\_\-int , ilosc stworzonych stringow \\
+\hline
+{\em \mbox{]}} & Ile\-Liter -\/ typ int, jak wiele liter ma posiadac dany string \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 86 pliku Tablica\-Asosjacyjna.\-cpp.
+
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!Wstawianie\-Danych\-Z\-Pliku@{Wstawianie\-Danych\-Z\-Pliku}}
+\index{Wstawianie\-Danych\-Z\-Pliku@{Wstawianie\-Danych\-Z\-Pliku}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{Wstawianie\-Danych\-Z\-Pliku}]{\setlength{\rightskip}{0pt plus 5cm}void Tablica\-Asocjacyjna\-::\-Wstawianie\-Danych\-Z\-Pliku (
+\begin{DoxyParamCaption}
+\item[{std\-::ifstream \&}]{plikwe, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_tablica_asocjacyjna_ab5c01397c7d79785c794e418753697f5}
+brief Funkcja wstawia dane z pliku do slownika z wykorzystaniem haszowania
+
+Funkcja wstawia dane z pliku do slownika z wykorzystaniem haszowania 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & plikwe -\/ referencja do strumienia wejsciowego \\
+\hline
+{\em \mbox{]}} & size -\/ typ int, ilosc liczb wczytanych z pliku do slownika \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 36 pliku Tablica\-Asosjacyjna.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tablica_asocjacyjna_ab5c01397c7d79785c794e418753697f5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tablica_asocjacyjna_ab5c01397c7d79785c794e418753697f5_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!Wstawianie\-Do\-Tablicy@{Wstawianie\-Do\-Tablicy}}
+\index{Wstawianie\-Do\-Tablicy@{Wstawianie\-Do\-Tablicy}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{Wstawianie\-Do\-Tablicy}]{\setlength{\rightskip}{0pt plus 5cm}void Tablica\-Asocjacyjna\-::\-Wstawianie\-Do\-Tablicy (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{nazwa}
+\end{DoxyParamCaption}
+)}\label{class_tablica_asocjacyjna_a74a7c9eb56a52c12f5048c9348771cc4}
+brief Funkcja Wstawiajaca do slownika dany string, wykorzystujaca haszowanie
+
+Funkcja wyszukujaca dany string w slowniku z wykorzystaniem haszowania 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & nazwa -\/ nazwa stringu, ktory bedzie haszowany i umieszczony w slowniku \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 25 pliku Tablica\-Asosjacyjna.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_tablica_asocjacyjna_a74a7c9eb56a52c12f5048c9348771cc4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tablica_asocjacyjna_a74a7c9eb56a52c12f5048c9348771cc4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!Wyszukaj@{Wyszukaj}}
+\index{Wyszukaj@{Wyszukaj}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{Wyszukaj}]{\setlength{\rightskip}{0pt plus 5cm}bool Tablica\-Asocjacyjna\-::\-Wyszukaj (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{nazwa}
+\end{DoxyParamCaption}
+)}\label{class_tablica_asocjacyjna_a21de0956122e8dbf35bdc87951544210}
+brief Funkcja wyszukujaca dany string w slowniku z wykorzystaniem haszowania
+
+Funkcja wyszukujaca dany string w slowniku z wykorzystaniem haszowania 
+\begin{DoxyParams}{Parametry}
+{\em \mbox{]}} & nazwa -\/ string z ktorego zostanie obliczona wartosc hasz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true-\/jesli dany string znaleziono, false -\/ nie znaleziono 
+\end{DoxyReturn}
+
+
+Definicja w linii 64 pliku Tablica\-Asosjacyjna.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_tablica_asocjacyjna_a21de0956122e8dbf35bdc87951544210_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_tablica_asocjacyjna_a21de0956122e8dbf35bdc87951544210_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!rozmiar@{rozmiar}}
+\index{rozmiar@{rozmiar}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long int Tablica\-Asocjacyjna\-::rozmiar}\label{class_tablica_asocjacyjna_a65be6187d9e5b32f0350662529bee6e3}
+brief Informacja o ilosci elementow w slowniku 
+
+Definicja w linii 19 pliku Tablica\-Asocjacyjna.\-hh.
+
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!slownik@{slownik}}
+\index{slownik@{slownik}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{slownik}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stack}$<${\bf List}$<$std\-::string$>$ $>$ Tablica\-Asocjacyjna\-::slownik}\label{class_tablica_asocjacyjna_adaacea4af5471d9977e082bb1b4c58f2}
+brief Zmienna przechowujaca dane wlasciwe(stringi) 
+
+Definicja w linii 27 pliku Tablica\-Asocjacyjna.\-hh.
+
+\index{Tablica\-Asocjacyjna@{Tablica\-Asocjacyjna}!wzmocnienie@{wzmocnienie}}
+\index{wzmocnienie@{wzmocnienie}!TablicaAsocjacyjna@{Tablica\-Asocjacyjna}}
+\subsubsection[{wzmocnienie}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tablica\-Asocjacyjna\-::wzmocnienie}\label{class_tablica_asocjacyjna_af9e8cf03f24acda77d70c27b0fef0b1c}
+brief Zmienna wymagana do haszowania 
+
+Definicja w linii 23 pliku Tablica\-Asocjacyjna.\-hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Tablica\-Asocjacyjna.\-hh}\item 
+{\bf Tablica\-Asosjacyjna.\-cpp}\end{DoxyCompactItemize}
