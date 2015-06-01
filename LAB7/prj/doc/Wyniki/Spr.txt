@@ -1,0 +1,32 @@
+Sprawozdanie powstanie w najbliższym czasie
+
+Na podstawie wyników pomiarowych:
+1.
+Drzewo RedBlack	     	   	Drzewo Binarne
+Ilosc Czas[ns]				Ilosc Czas[ns]
+10 505						10 607
+100 4304					100 7618
+1000 80431				1000 102142
+10000 1115238				10000 1087141
+100000 10598129			100000 11066580
+200000 27643994			200000 25833812
+
+- średnie wyszukiwanie elementów, czyli wyszukanie każdego istniejącego
+elementu drzewa jest takie samo dla drzewa binarnego i czerwono-czarnego.
+
+2.
+Drzewo RedBlack	     	   	Drzewo Binarne
+Ilosc Czas[ns]				Ilosc Czas[ns]
+10 6042					10 1231
+100 16770					100 16025
+1000 204471				1000 216010
+10000 2511705				10000 3731685
+100000 33310795			100000 723712257
+200000 82407274			200000 4573720285
+
+- dodawanie elementów:
+  *drzewo binarne dodaje elementy szybciej dla rozmiaru 100,
+  powyżej rozmiaru 100 drzewo czerwono-czarne rządzi.
+  *dla 200 000 elementów jest to różnica 100 razy i tendencja nadal rośnie.
+
+3.Dla róznych rozmiarów i braku elementu w drzewie

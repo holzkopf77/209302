@@ -50,7 +50,7 @@ void ZnajdzBinaryTree(int rozmiar, int * daneWe,BinaryTree<int> *drzewo)
 void ZnajdzBinaryTreeNieIstniejacyElement(int rozmiar, int * daneWe,BinaryTree<int> *drzewo)
 {
   std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
-    drzewo->find(-1569);
+  drzewo->find(926);//grepem w DaneCalkowite.dat sprawdzilem, ze nie ma takiej liczby w zbiorze
   auto elapsed = std::chrono::high_resolution_clock::now() - start;
   auto microseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
   drzewo->ZmienDaneTestowe(rozmiar,microseconds);
@@ -59,7 +59,7 @@ void ZnajdzBinaryTreeNieIstniejacyElement(int rozmiar, int * daneWe,BinaryTree<i
 void ZnajdzRBTreeNieIstniejacyElement(int rozmiar, int * daneWe,RBTree<int> *drzewo)
 {
   std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
-    drzewo->find(-1569);
+    drzewo->find(926);//grepem w DaneCalkowite.dat sprawdzilem, ze nie ma takiej liczby w zbiorze
   auto elapsed = std::chrono::high_resolution_clock::now() - start;
   auto microseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
   drzewo->ZmienDaneTestowe(rozmiar,microseconds);
@@ -85,16 +85,26 @@ void ZbadajZlozonoscDrzew(int *dane,int IleRazy,int *rozmiar,std::ostream &OutRB
       obserwator2.zapisz(OutBIadd);
       obserwator2.clear();
      
-      ZnajdzRBTree(rozmiar[i],dane,&treeRB);
+      // ZnajdzRBTree(rozmiar[i],dane,&treeRB);
+      // treeRB.powiadom();
+      // obserwator.zapisz(OutRBfind);
+      // obserwator.clear();
+  
+      // ZnajdzBinaryTree(rozmiar[i],dane,&treeBinary);
+      // treeBinary.powiadom();
+      // obserwator2.zapisz(OutBIfind);
+      // obserwator2.clear();
+
+      ZnajdzRBTreeNieIstniejacyElement(rozmiar[i],dane,&treeRB);
       treeRB.powiadom();
       obserwator.zapisz(OutRBfind);
       obserwator.clear();
-  
-      ZnajdzBinaryTree(rozmiar[i],dane,&treeBinary);
+
+      ZnajdzBinaryTreeNieIstniejacyElement(rozmiar[i],dane,&treeBinary);
       treeBinary.powiadom();
       obserwator2.zapisz(OutBIfind);
       obserwator2.clear();
-	
+      
     }
 }
 

@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Za\IeC {\l }o\IeC {\.z}enia zadania}{1}
+\contentsline {section}{\numberline {2}Zaimplementowane struktury}{2}
+\contentsline {subsection}{\numberline {2.1}Drzewo binarne}{2}
+\contentsline {subsection}{\numberline {2.2}Drzewo czerwono-czarne}{2}
+\contentsline {section}{\numberline {3}Wyniki}{3}
+\contentsline {subsection}{\numberline {3.1}Por\IeC {\'o}wnanie dodawania element\IeC {\'o}w dla drzewa binarnego i drzewa czerwono-czarnego}{3}
+\contentsline {subsection}{\numberline {3.2}Por\IeC {\'o}wnanie wyszukiwania wszystkich element\IeC {\'o}w drzewa dla drzewa binarnego i czerwono-czarnego}{4}
+\contentsline {subsection}{\numberline {3.3}Por\IeC {\'o}wnanie wyszukiwania elementu nieznajduj\IeC {\k a}cego si\IeC {\k e} w drzewach}{5}
+\contentsline {section}{\numberline {4}Wnioski}{6}
